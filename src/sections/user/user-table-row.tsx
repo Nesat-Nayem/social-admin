@@ -69,7 +69,7 @@ export default function UserTableRow({
 
         <TableCell sx={{ whiteSpace: 'nowrap' }}>{gender}</TableCell>
 
-        <TableCell sx={{ whiteSpace: 'nowrap' }}>{dob}</TableCell>
+        {/* <TableCell sx={{ whiteSpace: 'nowrap' }}>{dob}</TableCell> */}
         <TableCell sx={{ whiteSpace: 'nowrap' }}>{country}</TableCell>
         <TableCell sx={{ whiteSpace: 'nowrap' }}>{state}</TableCell>
         <TableCell sx={{ whiteSpace: 'nowrap' }}>{city}</TableCell>
