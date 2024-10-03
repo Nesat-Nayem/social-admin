@@ -81,7 +81,10 @@ export default function UsersView() {
 
   const confirm = useBoolean();
 
-  const [tableData, setTableData] = useState<IUserItem[]>(_userList);
+  const [tableData, setTableData] = useState<IUserItem[]>(_userList.map(user => ({
+    ...user,
+    dob: new Date(user.dob)
+  })));
 
   const [filters, setFilters] = useState(defaultFilters);
 
