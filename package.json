@@ -41,6 +41,7 @@
     "fetcher": "^0.3.0",
     "framer-motion": "10.16.16",
     "highlight.js": "^11.10.0",
+    "i18next": "^23.15.1",
     "lodash": "4.17.21",
     "mui-one-time-password-input": "^2.0.3",
     "next": "14.0.4",
