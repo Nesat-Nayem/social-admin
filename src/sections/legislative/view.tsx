@@ -74,7 +74,12 @@ export default function LegislativeView() {
   const router = useRouter();
   const confirm = useBoolean();
 
-  const [tableData, setTableData] = useState<ILegislativeItem[]>(_legislativeList);
+  const [tableData, setTableData] = useState<ILegislativeItem[]>(_legislativeList.map(item => ({
+    ...item,
+    introducedInLsRS: new Date(item.introducedInLsRS),
+    passedInLs: new Date(item.passedInLs),
+    passedInRs: new Date(item.passedInRs)
+  })));
   const [filters, setFilters] = useState(defaultFilters);
 
   const dataFiltered = applyFilter({
