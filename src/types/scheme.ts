@@ -14,5 +14,5 @@ export type ISchemeItem = {
   title: string;
   desc: string;
   publishedDate: Date;
-  location: string;
+  // location: string;
 };

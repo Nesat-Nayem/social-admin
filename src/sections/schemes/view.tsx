@@ -73,7 +73,7 @@ export default function SchemeView() {
     _schemesList.map((scheme) => ({
       ...scheme,
       publishedDate: new Date(scheme.publishedDate),
-      location: scheme.location,
+      // location: scheme.location,
     }))
   );
   const [filters, setFilters] = useState(defaultFilters);
