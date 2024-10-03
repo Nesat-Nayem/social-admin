@@ -1,5 +1,5 @@
 import { sub } from 'date-fns';
-
+import { IVotersItem } from 'src/types/voters';
 import { ASSETS_API } from 'src/config-global';
 
 import {
@@ -48,6 +48,7 @@ import {
   _votersVotingPerct,
   _votersConstituency,
 } from './assets';
+
 
 // ----------------------------------------------------------------------
 
@@ -123,3 +124,26 @@ export const _mock = {
     portrait: (index: number) => `${ASSETS_API}/assets/images/portrait/portrait_${index + 1}.jpg`,
   },
 };
+
+export const _votersSummaryList: IVotersItem[] = [
+  {
+    id: _mock.id(0),
+    votingName: _mock.votingName(0),
+    votingLocations: _mock.votingLocations(0),
+    votingRegions: _mock.votingRegions(0),
+    votingAgeGroups: _mock.votingAgeGroups(0),
+    votingCount: _mock.votingCount(0),
+    votingState: _mock.votingState(0),
+    votingDistrict: _mock.votingDistrict(0),
+    votingConstituency: _mock.votingConstituency(0),
+    votingTotalVoting: _mock.votingTotalVoting(0),
+    votingPerct: _mock.votingPerct(0),
+    votingImg: _mock.votingImg(0),
+    // Add these if they're needed
+    includes: [],
+    name: '',
+    service: '',
+    status: '',
+  },
+  // ... other items
+];

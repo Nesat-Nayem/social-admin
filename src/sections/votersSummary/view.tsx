@@ -18,7 +18,7 @@ import { RouterLink } from 'src/routes/components';
 
 import { useBoolean } from 'src/hooks/use-boolean';
 
-import { _roles, _votersSummaryList } from 'src/_mock';
+import { _roles, votersSummaryList } from 'src/_mock';
 
 import Iconify from 'src/components/iconify';
 import Scrollbar from 'src/components/scrollbar';
@@ -54,7 +54,7 @@ const TABLE_HEAD = [
 ];
 
 const defaultFilters: IVotersTableFilters = {
-  name: '',
+  services: [],
 };
 
 // ----------------------------------------------------------------------
@@ -70,9 +70,10 @@ export default function VotersView() {
 
   const confirm = useBoolean();
 
-  const [tableData, setTableData] = useState<IVotersItem[]>(_votersSummaryList);
+  const [tableData, setTableData] = useState<IVotersItem[]>(votersSummaryList);
 
   const [filters, setFilters] = useState(defaultFilters);
+  // const [filters, setFilters] = useState([]);
 
   const dataFiltered = applyFilter({
     inputData: tableData,
@@ -300,7 +301,7 @@ function applyFilter({
   comparator: (a: any, b: any) => number;
   filters: IVotersTableFilters;
 }) {
-  const { name } = filters;
+  // const { name } = filters;
 
   const stabilizedThis = inputData.map((el, index) => [el, index] as const);
 
@@ -312,11 +313,11 @@ function applyFilter({
 
   inputData = stabilizedThis.map((el) => el[0]);
 
-  if (name) {
-    inputData = inputData.filter(
-      (user) => user.name.toLowerCase().indexOf(name.toLowerCase()) !== -1
-    );
-  }
+  // if (name) {
+  //   inputData = inputData.filter(
+  //     (user) => user.name.toLowerCase().indexOf(name.toLowerCase()) !== -1
+  //   );
+  // }
 
   return inputData;
 }

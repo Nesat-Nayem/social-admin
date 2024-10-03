@@ -5,11 +5,25 @@ export type IVotersFilterValue = string | string[] | number | number[];
 // ----------------------------------------------------------------------
 
 export type IVotersItem = {
-  includes(service: string): unknown;
+  // includes(service: string): unknown;
+  // id: string;
+  // name: string;
+  // votingName: string;
+  // votingImg: string;
+  // votingLocations: string;
+  // votingRegions: string;
+  // votingAgeGroups: string;
+  // votingCount: string;
+  // votingState: string;
+  // votingDistrict: string;
+  // votingConstituency: string;
+  // votingTotalVoting: string;
+  // votingPerct: string;
+  // service: string;
+  // status: string;
+
   id: string;
-  name: string;
   votingName: string;
-  votingImg: string;
   votingLocations: string;
   votingRegions: string;
   votingAgeGroups: string;
@@ -19,8 +33,13 @@ export type IVotersItem = {
   votingConstituency: string;
   votingTotalVoting: string;
   votingPerct: string;
-  service: string;
-  status: string;
+  votingImg: string;
+  // avatarUrl: string;
+  // Add these properties if they're needed in your component
+  includes?: any;
+  name?: string;
+  service?: string;
+  status?: string;
 };
 
 export type IVotersTableFilterValue = string | string[];

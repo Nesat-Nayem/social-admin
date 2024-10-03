@@ -34,7 +34,7 @@ export default function VotersQuickEditForm({ currentVoters, open, onClose }: Pr
 
   const NewUserSchema = Yup.object().shape({
     votingName: Yup.string().required('Voting Name is required'),
-    avatarUrl: Yup.mixed<any>().nullable().required('Avatar is required'),
+    // avatarUrl: Yup.mixed<any>().nullable().required('Avatar is required'),
     votingLocations: Yup.string().required('Voting Locations are required'),
     votingRegions: Yup.string().required('Voting Regions are required'),
     votingAgeGroups: Yup.string().required('Voting Age Groups are required'),
@@ -49,7 +49,7 @@ export default function VotersQuickEditForm({ currentVoters, open, onClose }: Pr
   const defaultValues = useMemo(
     () => ({
       votingName: currentVoters?.votingName || '',
-      avatarUrl: currentVoters?.avatarUrl || null,
+      // avatarUrl: currentVoters?.avatarUrl || null,
       votingLocations: currentVoters?.votingLocations || '',
       votingRegions: currentVoters?.votingRegions || '',
       votingAgeGroups: currentVoters?.votingAgeGroups || '',

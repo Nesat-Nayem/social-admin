@@ -4,6 +4,7 @@ import { _mock } from './_mock';
 
 export const _votersSummaryList = [...Array(4)].map((_, index) => ({
   id: _mock.id(index),
+  
   votingName: _mock.votingName(index),
   votingLocations: _mock.votingLocations(index),
   votingRegions: _mock.votingRegions(index),
