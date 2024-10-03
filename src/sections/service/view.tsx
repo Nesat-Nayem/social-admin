@@ -363,9 +363,9 @@ export default function InquiryView() {
               noResultsOverlay: () => <EmptyContent title="No results found" />,
             }}
             slotProps={{
-              columnsPanel: {
-                getTogglableColumns,
-              },
+              // columnsPanel: {
+              //   getTogglableColumns,
+              // },
             }}
           />
         </Card>
