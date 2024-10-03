@@ -36,7 +36,7 @@ export default function SchemeQuickEditForm({ currentScheme, open, onClose }: Pr
   const NewUserSchema = Yup.object().shape({
     title: Yup.string().required('Title is required'),
     desc: Yup.string().required('Description is required'),
-    location: Yup.string().required('Location is required'),
+    // location: Yup.string().required('Location is required'),
     publishedDate: Yup.date().required('Published date is required'),
   });
 
@@ -44,7 +44,7 @@ export default function SchemeQuickEditForm({ currentScheme, open, onClose }: Pr
     () => ({
       title: currentScheme?.title || '',
       desc: currentScheme?.desc || '',
-      location: currentScheme?.location || '',
+      // location: currentScheme?.location || '',
       publishedDate: currentScheme?.publishedDate || new Date(),
     }),
     [currentScheme]
